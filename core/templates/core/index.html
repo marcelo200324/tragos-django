@@ -1,0 +1,26 @@
+{% extends "core/base.html" %}
+
+{% block title %}Tragos{% endblock %}
+
+{% block content %}
+    {% for trago in tragos %}
+        <div class="trago-card">
+            {% if trago.imagen %}
+                <img src="{{ trago.imagen.url }}" alt="{{ trago.nombre }}" class="thumb">
+            {% else %}
+                <div class="placeholder">No hay imagen</div>
+            {% endif %}
+            <h2>{{ trago.nombre }}</h2>
+            <p>{{ trago.preparacion|truncatechars:80 }}</p>
+            <a href="{% url 'core:detalle' trago.pk %}" class="btn">Ver detalle</a>
+        </div>
+    {% empty %}
+        <p>No hay tragos disponibles.</p>
+    {% endfor %}
+{% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Tragos{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <h1>Mis Tragos</h1>
+        <h2>Lista de Tragos</h2>
+
+        <form method="get" action="" class="search">
+            <input type="text" name="q" placeholder="Buscar..." value="{{ query }}">
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+
+    <main class="tragos-container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            Creado con Django · Panel admin para agregar tragos
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+

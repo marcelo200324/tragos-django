@@ -1,0 +1,20 @@
+{% extends "core/base.html" %}
+
+{% block title %}{{ trago.nombre }}{% endblock %}
+
+{% block content %}
+<div class="detalle-card">
+    {% if trago.imagen %}
+        <img src="{{ trago.imagen.url }}" alt="{{ trago.nombre }}" class="detalle-imagen">
+    {% endif %}
+    <h2>{{ trago.nombre }}</h2>
+    <p><strong>Preparación:</strong><br>{{ trago.preparacion|linebreaksbr }}</p>
+
+    <a href="{% url 'core:index' %}" class="btn-volver">← Volver al buscador</a>
+</div>
+{% endblock %}
+
+
+
+
+
