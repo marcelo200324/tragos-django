@@ -101,8 +101,12 @@ USE_TZ = True
 # -------------------------
 # Archivos estáticos
 # -------------------------
+#STATIC_URL = '/static/'
+#STATICFILES_DIRS = [BASE_DIR / 'staticfiles']
+
+
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # -------------------------
 # Archivos media (imágenes subidas)
