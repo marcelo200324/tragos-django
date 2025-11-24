@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Configuración básica
 # -------------------------
 SECRET_KEY = 'tu_clave_secreta_aqui'
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['*']   # <--- CAMBIO NECESARIO
 
 # -------------------------
@@ -30,6 +30,7 @@ INSTALLED_APPS = [
 # -------------------------
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
