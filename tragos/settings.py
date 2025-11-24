@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # -------------------------
 SECRET_KEY = 'tu_clave_secreta_aqui'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']   # <--- CAMBIO NECESARIO
 
 # -------------------------
 # Aplicaciones instaladas
@@ -113,4 +113,3 @@ MEDIA_ROOT = BASE_DIR / 'media'    # Carpeta física en tu proyecto
 # Otros
 # -------------------------
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
