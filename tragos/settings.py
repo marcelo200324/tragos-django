@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Configuración básica
 # -------------------------
 SECRET_KEY = 'tu_clave_secreta_aqui'
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['*']   # <--- CAMBIO NECESARIO
 
 # -------------------------
